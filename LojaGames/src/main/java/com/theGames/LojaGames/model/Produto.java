@@ -29,10 +29,9 @@ public class Produto {
 	@NotNull
 	private float preco;
 
-	@NotNull
 	@Type(type = "true_false")
 	@Column(name = "disponivel")
-	private boolean disponivel;
+	private Boolean disponivel;
 
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
@@ -77,5 +76,4 @@ public class Produto {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
-
 }

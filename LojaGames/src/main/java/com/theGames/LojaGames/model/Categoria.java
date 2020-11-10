@@ -29,10 +29,9 @@ public class Categoria {
 	@Size(min = 4, max = 30)
 	private String tipo;
 
-	@NotNull
 	@Type(type = "true_false")
 	@Column(name = "ativo")
-	private boolean ativo;
+	private Boolean ativo;
 
 	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("categoria")
